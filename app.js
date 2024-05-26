@@ -223,3 +223,17 @@ const products = [
         brand: "Bosch"
     }
 ];
+
+// const arrayItems = products.filter(item=>{
+//     return item.category === 'Electronics' && item.price > 100
+// }).filter((item)=>{
+//     return item.price < 700
+// })
+
+// console.log(arrayItems)
+
+
+const arrayItems = products.filter(item => item.category === 'Electronics').filter(item=>{
+    return item.price > 100 && item.price < 700
+})
+console.log(arrayItems)
