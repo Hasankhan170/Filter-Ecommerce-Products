@@ -279,15 +279,20 @@ const filterItems = (btn)=>{
 
 
 
-products.map(item => {
-    div.innerHTML += `<div class="card mt-2 p-3" style="width: 16rem; color : white; background-color : black;>
+let allItems = ()=>{
+    div.innerHTML = ''
+    products.map(item=>{
+        div.innerHTML += `<div class="card mt-2 p-3" style="width: 16rem; color : white; background-color : black;>
         <div class="card-body">
             <h5 class="card-title">Product Name: ${item.name}</h5>
             <hr/>
             <p class="card-text">Price: $${item.price}<br>Category: ${item.category}<br>Brand: ${item.brand}</p>
         </div>
     </div>`;
-});
+
+    })
+ 
+};
 
 
 
